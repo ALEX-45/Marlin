@@ -50,7 +50,17 @@
 // Temperature Sensors
 //
 #define TEMP_0_PIN          9   // Analog Input
-#define TEMP_1_PIN         -1   // Analog Input
+#define TEMP_1_PIN         11   // Analog Input //my
 #define TEMP_BED_PIN       10   // Analog Input
+
+//MY
+
+#define Z2_STEP_PIN 32 //46
+#define Z2_DIR_PIN 47  //48
+#define Z2_ENABLE_PIN 62
+
+#define X2_STEP_PIN 45 //54
+#define X2_DIR_PIN 43  //55
+#define X2_ENABLE_PIN 38
 
 #include "../ramps/pins_RAMPS.h"
