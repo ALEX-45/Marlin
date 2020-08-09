@@ -696,8 +696,10 @@ int16_t Temperature::getHeaterPower(const heater_ind_t heater_id) {
         SBI(fanState, pgm_read_byte(&fanBit[e]));
 
     #if HAS_AUTO_CHAMBER_FAN
-      if (temp_chamber.celsius >= CHAMBER_AUTO_FAN_TEMPERATURE)
-        SBI(fanState, pgm_read_byte(&fanBit[CHAMBER_FAN_INDEX]));
+      //my
+	  if(temp_chamber.target)
+      //if (temp_chamber.celsius >= CHAMBER_AUTO_FAN_TEMPERATURE) //default
+      SBI(fanState, pgm_read_byte(&fanBit[CHAMBER_FAN_INDEX]));
     #endif
 
     #define _UPDATE_AUTO_FAN(P,D,A) do{                  \

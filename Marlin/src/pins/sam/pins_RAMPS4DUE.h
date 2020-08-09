@@ -49,8 +49,17 @@
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN          9   // Analog Input
-#define TEMP_1_PIN         -1   // Analog Input
-#define TEMP_BED_PIN       10   // Analog Input
+#define TEMP_0_PIN          9            // Analog Input
+#define TEMP_1_PIN         11   //my-1   // Analog Input
+#define TEMP_BED_PIN       10            // Analog Input
+
+//MY
+
+//#define TEMP_CHAMBER_PIN
+// I2C EEPROM with 256K of space
+#define I2C_EEPROM
+#define E2END 0x3FFFF // объем памяти именно 256К (262143 бит)
+
+//end MY
 
 #include "../ramps/pins_RAMPS.h"
