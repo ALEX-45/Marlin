@@ -128,7 +128,11 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
+<<<<<<< Updated upstream
   #define MOTHERBOARD BOARD_RAMPSFD_EEB //my
+=======
+#define MOTHERBOARD BOARD_RAMPS4DUE_EEB //my
+>>>>>>> Stashed changes
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
