@@ -118,7 +118,7 @@
  */
 #if TEMP_SENSOR_CHAMBER
 
-  #define TEMP_CHAMBER_PIN 			 3//57   // Analog Input //my add
+  #define TEMP_CHAMBER_PIN 			 3//D57   // Analog Input //my add
  
   #define CHAMBER_MINTEMP             2 //my 5
   #define CHAMBER_MAXTEMP            75 //my 60
@@ -429,7 +429,7 @@
 #define E3_AUTO_FAN_PIN -1
 #define E4_AUTO_FAN_PIN -1
 #define E5_AUTO_FAN_PIN -1
-#define CHAMBER_AUTO_FAN_PIN 58 //11 //my also edit temperature.cpp -1
+#define CHAMBER_AUTO_FAN_PIN 58 //my also edit temperature.cpp -1
 
 #define EXTRUDER_AUTO_FAN_TEMPERATURE 50
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
@@ -1164,7 +1164,7 @@
    *
    * [1] On AVR an interrupt-capable pin is best for UHS3 compatibility.
    */
-  #define USB_FLASH_DRIVE_SUPPORT //my
+  //#define USB_FLASH_DRIVE_SUPPORT //my
   #if ENABLED(USB_FLASH_DRIVE_SUPPORT)
     #define USB_CS_PIN    SDSS
     #define USB_INTR_PIN  SD_DETECT_PIN
@@ -1179,7 +1179,7 @@
      *   is less tested and is known to interfere with Servos.
      *   [1] This requires USB_INTR_PIN to be interrupt-capable.
      */
-    #define USE_UHS3_USB //my
+    //#define USE_UHS3_USB //my
   #endif
 
   /**
@@ -1296,10 +1296,10 @@
   #define BOOT_MARLIN_LOGO_ANIMATED //my // Animated Marlin logo. Costs ~‭3260 (or ~940) bytes of PROGMEM.
 
   // Frivolous Game Options //my
-  #define MARLIN_BRICKOUT
-  #define MARLIN_INVADERS
-  #define MARLIN_SNAKE
-  #define GAMES_EASTER_EGG          // Add extra blank lines above the "Games" sub-menu
+  // #define MARLIN_BRICKOUT
+  // #define MARLIN_INVADERS
+  // #define MARLIN_SNAKE
+  // #define GAMES_EASTER_EGG          // Add extra blank lines above the "Games" sub-menu
 
 #endif // HAS_GRAPHICAL_LCD
 
@@ -1458,7 +1458,7 @@
  * NOTE: This method is less reliable as it can only catch hangups while
  * interrupts are enabled.
  */
-#define USE_WATCHDOG
+#define USE_WATCHDOG //my
 #if ENABLED(USE_WATCHDOG)
   //#define WATCHDOG_RESET_MANUAL
 #endif
@@ -1476,7 +1476,7 @@
 #if ENABLED(BABYSTEPPING)
   //#define INTEGRATED_BABYSTEPPING         // EXPERIMENTAL integration of babystepping into the Stepper ISR
   //#define BABYSTEP_WITHOUT_HOMING
-  #define BABYSTEP_XY     //my                // Also enable X/Y Babystepping. Not supported on DELTA!
+  //#define BABYSTEP_XY     //my have problem with corexy             // Also enable X/Y Babystepping. Not supported on DELTA!
   #define BABYSTEP_INVERT_Z false           // Change if Z babysteps should go the other way
   #define BABYSTEP_MULTIPLICATOR_Z  100//my 1       // Babysteps are very small. Increase for faster motion.
   #define BABYSTEP_MULTIPLICATOR_XY 1
@@ -1872,7 +1872,7 @@
  * Requires NOZZLE_PARK_FEATURE.
  * This feature is required for the default FILAMENT_RUNOUT_SCRIPT.
  */
-//#define ADVANCED_PAUSE_FEATURE
+#define ADVANCED_PAUSE_FEATURE //my
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
   #define PAUSE_PARK_RETRACT_FEEDRATE         60  // (mm/s) Initial retract feedrate.
   #define PAUSE_PARK_RETRACT_LENGTH            2  // (mm) Initial retract.
