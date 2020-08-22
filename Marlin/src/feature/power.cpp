@@ -33,6 +33,8 @@
 #include "../module/stepper/indirection.h"
 #include "../MarlinCore.h"
 
+#include "controllerfan.h" //my
+
 Power powerManager;
 
 millis_t Power::lastPowerOn;
